@@ -1,6 +1,4 @@
 # NATS之gnatcd初体验
-date: 2016-04-10
----
 
 
 现在Message Queue有多种选择，比如Java的Kafaka/ActiveMQ、Erlang的RabbitMQ、Golang的NSQ以及这里要说的gnatcd。
@@ -19,7 +17,6 @@ date: 2016-04-10
 											-- http://nats.io/documentation/
 											
 gnatcd根据NATS说法，会由Apcera维护，并提供源码、二进制文件以及Docker镜像文件。
-<!-- more -->
 
 ##2. NATS组成以及支持的内容
 NATS主要由Golang写的服务器“gnatsd”和一系列的客户端SDK组成，客户端有官方维护`Golang`、`Node.js`、`Ruby`、`Java`、`C`、`C#`以及`Nginx C`版本，除此之外还有社区贡献的`Spring`、`Lua`、`PHP`、`Python`、`Scala`、`Haskell`版本，基本覆盖了主流语言。
@@ -110,10 +107,10 @@ NATS作为一个既老（2012年就有Ruby版本）又新（2013年的Golang版�
 
 另一个是[bravenewgeek](http://bravenewgeek.com/tag/gnatsd/)做的一个Golang MQ对比,结果如下：
 
-![bravenewgeek](http://images.libcz.com:8000/images/blog/golang/nats/images/bravenewgeek_benchmark.png)
+![bravenewgeek](./images/bravenewgeek_benchmark.png)
 
 另外他还做了一个和其他产品之间的[对比](http://bravenewgeek.com/dissecting-message-queues/),结果如下：
 
-![bravenewgeek2](http://images.libcz.com:8000/images/blog/golang/nats/images/bravenewgeek_benchmark2.png)
+![bravenewgeek2](./images/bravenewgeek_benchmark2.png)
 
 总的来说gnats的性能还是毋庸置疑的，主要可能还是要看他的使用场景。
