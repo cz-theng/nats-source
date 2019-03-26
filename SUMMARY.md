@@ -1,6 +1,6 @@
 # 目录
 
-* [README] (./README.md)
+* [Demo] (./have_a_try_with_gnatcd.md)
 * [0X00：协议](./gnatsd_source_00.md)
 * [0X01：代码目录结构](./gnatsd_source_01.md)
 * [0X02：Server构造](./gnatsd_source_02.md)
