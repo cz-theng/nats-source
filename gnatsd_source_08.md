@@ -86,7 +86,7 @@
 
 这里直接组合一个CONNECT协议，进行发送。
 
-我们在[NATS 开源学习——0X04：协议解析]()有说到在gnatsd解析INFO的实际上是调用了"server/router.go"里面的：
+我们在[NATS 开源学习——0X04：协议解析](./gnatsd_source_04.md)有说到在gnatsd解析INFO的实际上是调用了"server/router.go"里面的：
 	
 	 81 // Process the info message if we are a route.
 	 82 func (c *client) processRouteInfo(info *Info) {

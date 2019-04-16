@@ -7,7 +7,7 @@
 > 落地相关的逻辑，相对完善。
 
 
-Client对象在自己的goroutine里面读消息，解析消息，然后写消息。消息的读取和拼接在之前的文章[NATS 开源学习——0X03：Client服务]().有介绍：
+Client对象在自己的goroutine里面读消息，解析消息，然后写消息。消息的读取和拼接在之前的文章[NATS 开源学习——0X03：Client服务](./gnatsd_source_03.md).有介绍：
 
 ![](./images/client_parse.jpg)
 
@@ -142,7 +142,7 @@ parse.go定义了n多状态：
 这里会先记录收到了"CONNECT"的日志，然后对参数部分进行JSON解析（这里可以看到如文档所示，CONNECT的参数是JSON格式的），并存储在c.opts里面，也就是
 Clinet记录了客户端的信息。
 
-最后，如果客户端传入了[NATS 开源学习——0X00：协议]()中说的 "verbose: 是否关闭服务器的+OK冗余信息，+OK见下面的说明"，那么会向客户端回一个内容：
+最后，如果客户端传入了[NATS 开源学习——0X00：协议](./gnatsd_source_00.md)中说的 "verbose: 是否关闭服务器的+OK冗余信息，+OK见下面的说明"，那么会向客户端回一个内容：
 
 	+OK
 的协议。
@@ -161,7 +161,7 @@ Clinet记录了客户端的信息。
 	 408     return nil
 	 409 }
 	 
-具体processRouteInfo的操作，在后面的文章[NATS 开源学习——0X07：Router转发]()详细介绍。
+具体processRouteInfo的操作，在后面的文章[NATS 开源学习——0X07：Router转发](./gnatsd_source_07.md)详细介绍。
 	 
  
 ## 心跳协议

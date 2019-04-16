@@ -36,7 +36,7 @@ logos是NATS的logo图片 ![](./images/nats-server.png)
 
 test目录包含了非常详细的测试用例代码，可以覆盖大部分逻辑代码
 
-vendor目录是基于vendor放置的第三方依赖包，如果按照我们前一篇文章[NATS 开源学习——0X00：协议]()中介绍的“go mod”的
+vendor目录是基于vendor放置的第三方依赖包，如果按照我们前一篇文章[NATS 开源学习——0X00：协议](./gnatsd_source_00.md)中介绍的“go mod”的
 方式进行编译，则不需要这个目录了。
 
 ## main函数

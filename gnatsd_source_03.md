@@ -7,7 +7,7 @@
 > 落地相关的逻辑，相对完善。
 
 
-在前面的文章[NATS 开源学习——0X02：Server构造]()中说到，Server在接受到一个客户端的TCP
+在前面的文章[NATS 开源学习——0X02：Server构造](./gnatsd_source_02.md)中说到，Server在接受到一个客户端的TCP
 连接后，创建一个Client对象。Client对象是承载单个客户端连接逻辑的对象。Client会开启一个readloop，读消息，然后处理消息
 
 ## readloop
@@ -58,7 +58,7 @@ client.parse函数的定义在"server/parse.go" 文件中，在后面协议解�
 ## Flush
 在gnatsd的1.4.x中 除了上面的readLoop之外
 是还有writeLoop的，用来将要发送给客户端的数据写到网络IO，就是读IO有个groutine,写IO也有个groutine。
-但是在我们看的这个版本的gnatsd中，服务一个客户端连接的只有一个groutine(参考[NATS 开源学习——0X02：Server构造]()中的时序图）
+但是在我们看的这个版本的gnatsd中，服务一个客户端连接的只有一个groutine(参考[NATS 开源学习——0X02：Server构造](./gnatsd_source_02.md)中的时序图）
 
 ![](./images/server_timeline.jpg)
 
@@ -104,7 +104,7 @@ client.parse函数的定义在"server/parse.go" 文件中，在后面协议解�
 
 然后在每次loop里面，会将要处理的订阅消息发送给这里挂的其他订阅了的客户端。
 
-关于订阅处理，会在后面的[NATS 开源学习——0X06：发布消息]()中介绍。这里介绍的是client是如何处理消息的接受、处理和发送。
+关于订阅处理，会在后面的[NATS 开源学习——0X06：发布消息](./gnatsd_source_06.md)中介绍。这里介绍的是client是如何处理消息的接受、处理和发送。
 
 ## 总结
 通过readloop，Client完成了消息的读取、解析、处理和发送。一个client就是一个goroutine。多个client之间互不影响，无需异步IO操作，逻辑容易理解。

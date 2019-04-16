@@ -6,7 +6,7 @@
 > 因为一来这个版本比较稳定，同时也包含了集群管理和[Stream](https://github.com/nats-io/nats-streaming-server)
 > 落地相关的逻辑，相对完善。
 
-在前面的[NATS 开源学习——0X05：订阅消息]()中讲到订阅消息会在类型为Sublist 的svr.sl中插入一个subscription， 而在取消订阅的时候
+在前面的[NATS 开源学习——0X05：订阅消息](./gnatsd_source_05.md)中讲到订阅消息会在类型为Sublist 的svr.sl中插入一个subscription， 而在取消订阅的时候
 则会从svr.sl中删除一个subscription。
 
 那么server里面的的sl是什么呢？
@@ -65,7 +65,8 @@
 ![](./images/sublist.png)
 
 最上面是Sublist里面的 rootlevel。每个Level包含了一个node的Map，key为这个node表示的subscription的主题,以及另外两个表示带有通配符
-"*"：pwc节点和">"：fwc节点 。
+"*"：pwc节点和">"：fwc节点。
+
 
 比如图中包含了四个主题，分别是"TopicOne"、"TopicTwo"、 "TopicThree”， 因为不含通配符，所以这几个Node就都在RootLevel的nodes 字典内。
 

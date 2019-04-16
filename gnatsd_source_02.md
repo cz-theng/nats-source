@@ -242,7 +242,7 @@
 	...
 	}
 	
-首先创建一个client对象并将链接conn传个client。然后对client进行初始化，并向客户端发送INFO(想想在[NATS 开源学习——0X00：协议]()
+首先创建一个client对象并将链接conn传个client。然后对client进行初始化，并向客户端发送INFO(想想在[NATS 开源学习——0X00：协议](./gnatsd_source_00.md)
 中介绍的协议)	。接着开启一个routinue执行client的readLoop。相关代码，等我们分析client的时候再展开，实际上就是从客户端读消息然后处理消息。
 
 这块逻辑在1.4.x版本中有些不同，在新版本中还开启了一个writeLoop，用来flush缓存中的数据到客户端，这样做就可以对消息进行读写分离，并提高写的
