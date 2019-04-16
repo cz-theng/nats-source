@@ -7,14 +7,14 @@
 > 落地相关的逻辑，相对完善。
 
 ## gnatsd
-在好多年前写过一篇关于NATS的初体验[NATS之gnatcd初体验](http://www.czkit.com/posts/golang/nats/have_a_try_with_gnatcd/)。
+在好多年前写过一篇关于NATS的初体验[NATS之gnatcd初体验](./have_a_try_with_gnatcd.md)。
 那个时候gnatsd才0.8.0。当时只是因为新看到一个听说性能很屌的MQ，于是就尝试了一下，一晃眼，gnatsd都发布了n多个版本了（1.4.x都出来了）
 也成为了[CNCF](https://www.cncf.io/blog/2018/03/15/cncf-to-host-nats/)孵化项目之一。所以通过gnatsd的一个稳定版本来学习下
 这个MQ的实现。
 
 ## Demo
 
-在以前的文章[NATS之gnatcd初体验](http://www.czkit.com/posts/golang/nats/have_a_try_with_gnatcd/)中其实已经给出了一个Demo。
+在以前的文章[NATS之gnatcd初体验](./have_a_try_with_gnatcd.md)中其实已经给出了一个Demo。
 因为这里主要聚焦于服务器测，也就是gnatsd的实现，所以主要需要是替换Demo中的服务器。
 
 首先从1.0.0的tag处拉出来代码，或者直接下载1.0.0的代码，链接[gnatsd1.0.0](https://github.com/nats-io/gnatsd/tree/v1.0.0)。
